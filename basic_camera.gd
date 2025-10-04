@@ -24,8 +24,10 @@ func _set_camera_limits_from_bounds():
 		var rect_pos = get_parent().current_level.global_position - shape.extents
 
 		limit_left   = int(rect_pos.x)
-		limit_top    = int(rect_pos.y)
-		limit_right  = int(rect_pos.x + rect_size.x)
-		limit_bottom = int(rect_pos.y + rect_size.y)
+		limit_top    = int(rect_pos.y-500)
+		limit_right  = int(rect_pos.x + rect_size.x - 200)
+		limit_bottom = int(rect_pos.y + rect_size.y - 500)
+	
 func _process(delta):
+	_set_camera_limits_from_bounds()
 	position = player.global_position

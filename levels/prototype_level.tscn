@@ -70,7 +70,7 @@ shape = SubResource("RectangleShape2D_6lfjr")
 
 [node name="Camera2D" type="Camera2D" parent="Map"]
 position = Vector2(1429, 727)
-zoom = Vector2(0.5, 0.5)
+zoom = Vector2(0.8, 0.8)
 script = ExtResource("1_htrvu")
 follow_player = true
 
