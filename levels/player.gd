@@ -11,9 +11,9 @@ class_name Player extends CharacterBody2D
 
 var input = Vector2.ZERO
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * gravity_muliplier
-
+var direction
 var coyote_timer = 0
-var jump_buffer = 0;
+var jump_buffer = 0
 
 func _process(delta):
 	if is_on_floor():
@@ -27,9 +27,7 @@ func _physics_process(delta):
 	move_and_slide()
 	
 func move(delta):
-
-	var direction = Input.get_axis("d_left", "d_right")
-
+	direction = Input.get_axis("d_left", "d_right")
 	#Slow down for air friction
 	if not is_on_floor() && coyote_timer<=0:
 		velocity.y += gravity * delta
@@ -63,7 +61,6 @@ func move(delta):
 	#Trash code please fix
 	velocity.y = clamp(velocity.y,-gravity_terminal_velocity * 1000,gravity_terminal_velocity)
 	jump_buffer -= delta
-	print(jump_buffer)
 
 
 func is_falling():
