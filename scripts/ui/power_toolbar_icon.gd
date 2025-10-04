@@ -1,12 +1,12 @@
 extends MarginContainer
 
-@export var text = 1
+@export var text = "btn"
 
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
 @onready var label: Label = %Label
 
 func _ready():
-	label.text = str(text)
+	label.text = text
 
 func _process(_delta):
 	if Input.is_action_just_pressed("button_1"):

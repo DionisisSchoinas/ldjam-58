@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://ove2kbx55itx"]
 
-[ext_resource type="Script" uid="uid://dc2bjq2adirp2" path="res://scripts/power_toolbar_icon.gd" id="1_0jx2j"]
+[ext_resource type="Script" uid="uid://dc2bjq2adirp2" path="res://scripts/ui/power_toolbar_icon.gd" id="1_0jx2j"]
 [ext_resource type="Texture2D" uid="uid://cfhokjqiqcrcn" path="res://assets/kenney_prototype_textures/green/texture_01.png" id="1_nripl"]
 
 [sub_resource type="Animation" id="Animation_ok1a4"]

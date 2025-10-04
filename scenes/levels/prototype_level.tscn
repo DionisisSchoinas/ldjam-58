@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bd87osyhf2hnj" path="res://assets/kenney_prototype_textures/dark/texture_01.png" id="2_6lfjr"]
 [ext_resource type="Script" uid="uid://rq7qh2cm7r1v" path="res://scripts/levels/map.gd" id="3_i5e4g"]
 [ext_resource type="PackedScene" uid="uid://cphg78tqpqcha" path="res://scenes/player.tscn" id="3_qd0o6"]
-[ext_resource type="PackedScene" uid="uid://dv34dgh7go3f8" path="res://scenes/game_overlay.tscn" id="6_7kxsd"]
+[ext_resource type="PackedScene" uid="uid://dv34dgh7go3f8" path="res://scenes/ui/game_overlay.tscn" id="6_7kxsd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ibfnv"]
 texture = ExtResource("2_6lfjr")
