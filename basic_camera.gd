@@ -1,7 +1,7 @@
 extends Camera2D
 
 var player:Player
-@export var follow_player: bool = false
+@export var follow_player: bool = false 
 
 func _ready():
 	var players = get_tree().get_nodes_in_group("Player")
@@ -10,8 +10,23 @@ func _ready():
 	else:
 		push_warning("No player found in group 'player'!")
 
-func _process(delta):
-	if follow_player and player:
-		print(abs(position.x-player.global_position.x))
-		position.x =  lerp(position.x,player.global_position.x + 500 * player.direction,0.005)
+func _ready():
+	_set_camera_limits_from_bounds()
+		
+func _set_camera_limits_from_bounds():
+	if not get_parent().current_level:
+		push_warning("No CollisionShape2D found in Area2D!")
+		return
 	
+	var shape = get_parent().current_level.get_node("CollisionShape2D").shape
+	print( shape.extents)
+	if shape is RectangleShape2D:
+		var rect_size = shape.extents * 2
+		var rect_pos = get_parent().current_level.global_position - shape.extents
+
+		limit_left   = int(rect_pos.x)
+		limit_top    = int(rect_pos.y)
+		limit_right  = int(rect_pos.x + rect_size.x)
+		limit_bottom = int(rect_pos.y + rect_size.y)
+func proccess(delta):
+	position = player.global_position

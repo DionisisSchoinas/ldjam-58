@@ -15,6 +15,9 @@ var direction
 var coyote_timer = 0
 var jump_buffer = 0
 
+
+var collision_shape: CollisionShape2D
+
 func _process(delta):
 	if is_on_floor():
 		coyote_timer = 5 * delta
