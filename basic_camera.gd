@@ -5,13 +5,12 @@ var player:Player
 
 func _ready():
 	var players = get_tree().get_nodes_in_group("Player")
+	_set_camera_limits_from_bounds()
 	if players.size() > 0:
 		player = players[0]
 	else:
 		push_warning("No player found in group 'player'!")
-
-func _ready():
-	_set_camera_limits_from_bounds()
+	
 		
 func _set_camera_limits_from_bounds():
 	if not get_parent().current_level:
@@ -28,5 +27,5 @@ func _set_camera_limits_from_bounds():
 		limit_top    = int(rect_pos.y)
 		limit_right  = int(rect_pos.x + rect_size.x)
 		limit_bottom = int(rect_pos.y + rect_size.y)
-func proccess(delta):
+func _process(delta):
 	position = player.global_position
