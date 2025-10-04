@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cphg78tqpqcha"]
+
+[ext_resource type="Texture2D" uid="uid://1bdwn3b0tn8p" path="res://icon.svg" id="1_3ktyq"]
+[ext_resource type="Script" uid="uid://dla3pgx2j7d32" path="res://levels/player.gd" id="1_r3jqh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3jqh"]
+size = Vector2(127, 128)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_r3jqh")
+SPEED = 5
+friction_floor = 10000
+friction_air = 10000
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_3ktyq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_r3jqh")
