@@ -1,6 +1,7 @@
 extends Camera2D
 
 var player:Player
+@export var follow_player: bool = false
 
 func _ready():
 	var players = get_tree().get_nodes_in_group("Player")
@@ -10,7 +11,7 @@ func _ready():
 		push_warning("No player found in group 'player'!")
 
 func _process(delta):
-	if player:
+	if follow_player and player:
 		print(abs(position.x-player.global_position.x))
 		position.x =  lerp(position.x,player.global_position.x + 500 * player.direction,0.005)
 	
