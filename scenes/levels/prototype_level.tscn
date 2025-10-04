@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=4 uid="uid://d1upg8c1flyf1"]
 
-[ext_resource type="Script" uid="uid://nov170mkieef" path="res://levels/level_logic.gd" id="1_6lfjr"]
-[ext_resource type="Script" uid="uid://45g0vd44gdly" path="res://basic_camera.gd" id="1_htrvu"]
+[ext_resource type="Script" uid="uid://nov170mkieef" path="res://scripts/levels/level_logic.gd" id="1_6lfjr"]
+[ext_resource type="Script" uid="uid://45g0vd44gdly" path="res://scripts/basic_camera.gd" id="1_htrvu"]
 [ext_resource type="Texture2D" uid="uid://bd87osyhf2hnj" path="res://assets/kenney_prototype_textures/dark/texture_01.png" id="2_6lfjr"]
-[ext_resource type="Script" uid="uid://rq7qh2cm7r1v" path="res://levels/map.gd" id="3_i5e4g"]
-[ext_resource type="PackedScene" uid="uid://cphg78tqpqcha" path="res://player.tscn" id="3_qd0o6"]
+[ext_resource type="Script" uid="uid://rq7qh2cm7r1v" path="res://scripts/levels/map.gd" id="3_i5e4g"]
+[ext_resource type="PackedScene" uid="uid://cphg78tqpqcha" path="res://scenes/player.tscn" id="3_qd0o6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ibfnv"]
 texture = ExtResource("2_6lfjr")
