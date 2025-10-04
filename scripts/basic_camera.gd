@@ -27,6 +27,6 @@ func _set_camera_limits_from_bounds():
 		limit_right  = int(rect_pos.x + rect_size.x - 150)
 		limit_bottom = int(rect_pos.y + rect_size.y - 300)
 	
-func _process(delta):
+func _process(_delta):
 	_set_camera_limits_from_bounds()
 	position = player.global_position
