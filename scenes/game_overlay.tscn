@@ -13,33 +13,30 @@ grow_vertical = 2
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.3
-anchor_top = 0.8
-anchor_right = 0.7
+anchor_left = 0.25
+anchor_top = 0.75
+anchor_right = 0.75
 anchor_bottom = 0.95
-grow_horizontal = 2
-grow_vertical = 2
 
-[node name="powerContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="powerMarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
+
+[node name="powerContainer" type="HBoxContainer" parent="MarginContainer/powerMarginContainer"]
 layout_mode = 2
 
-[node name="power1" parent="MarginContainer/powerContainer" instance=ExtResource("1_7i0yb")]
+[node name="power1" parent="MarginContainer/powerMarginContainer/powerContainer" instance=ExtResource("1_7i0yb")]
 layout_mode = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
 
-[node name="power2" parent="MarginContainer/powerContainer" instance=ExtResource("1_7i0yb")]
+[node name="power2" parent="MarginContainer/powerMarginContainer/powerContainer" instance=ExtResource("1_7i0yb")]
 layout_mode = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
+text = 2
 
-[node name="power3" parent="MarginContainer/powerContainer" instance=ExtResource("1_7i0yb")]
+[node name="power3" parent="MarginContainer/powerMarginContainer/powerContainer" instance=ExtResource("1_7i0yb")]
 layout_mode = 2
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
+text = 3
+
+[node name="power4" parent="MarginContainer/powerMarginContainer/powerContainer" instance=ExtResource("1_7i0yb")]
+layout_mode = 2
+text = 4
