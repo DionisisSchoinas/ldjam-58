@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://biduepikn3db6"]
+
+[ext_resource type="Script" uid="uid://do0n76ppuxo7n" path="res://scripts/ui/key_selection_icon.gd" id="1_p6dwr"]
+[ext_resource type="PackedScene" uid="uid://7pnqip1tqsfr" path="res://scenes/ui/highlightable_icon.tscn" id="2_p6dwr"]
+
+[node name="key_selection_icon" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+script = ExtResource("1_p6dwr")
+
+[node name="highlightable_icon" parent="." instance=ExtResource("2_p6dwr")]
+unique_name_in_owner = true
+layout_mode = 2
