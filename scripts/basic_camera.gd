@@ -18,7 +18,6 @@ func _set_camera_limits_from_bounds():
 		return
 	
 	var shape = get_parent().current_level.get_node("CollisionShape2D").shape
-	print( shape.extents)
 	if shape is RectangleShape2D:
 		var rect_size = shape.extents * 2
 		var rect_pos = get_parent().current_level.global_position - shape.extents
@@ -28,6 +27,6 @@ func _set_camera_limits_from_bounds():
 		limit_right  = int(rect_pos.x + rect_size.x - 200)
 		limit_bottom = int(rect_pos.y + rect_size.y - 500)
 	
-func _process(delta):
+func _process(_delta):
 	_set_camera_limits_from_bounds()
 	position = player.global_position
