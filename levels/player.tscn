@@ -9,7 +9,6 @@ size = Vector2(127, 128)
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_r3jqh")
 SPEED = 5
-friction_floor = 10000
 friction_air = 10000
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

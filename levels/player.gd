@@ -8,18 +8,11 @@ class_name Player extends CharacterBody2D
 @export var friction_floor = 10000
 @export var friction_air = 5000
 @export var gravity_muliplier = 4
-@export var wall_ride_speed = 2400
-@export var dash_grace_in_frames = 5
-
-@export var wall_frames = 5
 
 var input = Vector2.ZERO
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * gravity_muliplier
+
 var coyote_timer = 0
-var current_jump_velocity;
-var going_at_max_speed = false
-var perv_direction = 0
-var chain_jump_timer = 0;
 var jump_buffer = 0;
 
 func _process(delta):
@@ -62,8 +55,7 @@ func move(delta):
 	if is_on_floor() or coyote_timer > 0:
 		if jump_buffer > 0 :
 			jump_buffer = 0
-			current_jump_velocity = JUMP_VELOCITY
-			velocity.y = -current_jump_velocity
+			velocity.y = -JUMP_VELOCITY
 	else :
 		if Input.is_action_just_released("button_1") and !is_falling():
 			velocity.y *= 0.5
