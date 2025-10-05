@@ -24,7 +24,12 @@ func _input(event: InputEvent):
 		hightlight_next(3)
 
 func key_selected(index: int):
-	select_power(GlobalKeySelector.keys.get(index)._power._id)
+	var key_index = index
+	if index < 0:
+		key_index = GlobalKeySelector.keys.size()-1
+	elif index > GlobalKeySelector.keys.size()-1:
+		key_index = 0
+	select_power(GlobalKeySelector.keys.get(wrap_selected_index(key_index))._power._id)
 	
 func select_power(index: int):
 	if powers == null || powers.is_empty():
