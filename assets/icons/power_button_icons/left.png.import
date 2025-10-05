@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cq62gusicub1e"
-path="res://.godot/imported/left_right.png-5837210672e2f55a2a8476174657d21b.ctex"
+uid="uid://c4lnoyxo2u31x"
+path="res://.godot/imported/left.png-54dfd20f482e4c0f0f6188bb130c356c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/power_button_icons/left_right.png"
-dest_files=["res://.godot/imported/left_right.png-5837210672e2f55a2a8476174657d21b.ctex"]
+source_file="res://assets/icons/power_button_icons/left.png"
+dest_files=["res://.godot/imported/left.png-54dfd20f482e4c0f0f6188bb130c356c.ctex"]
 
 [params]
 

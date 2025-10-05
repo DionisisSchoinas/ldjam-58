@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cyep1yu6pjwdm"
-path="res://.godot/imported/camoflouge.png-d4f8443e27ea551ebf143131cd5033fb.ctex"
+path="res://.godot/imported/camouflage.png-6e61435e7c65e2b7eb4a44c4830ec2d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/power_button_icons/camoflouge.png"
-dest_files=["res://.godot/imported/camoflouge.png-d4f8443e27ea551ebf143131cd5033fb.ctex"]
+source_file="res://assets/icons/power_button_icons/camouflage.png"
+dest_files=["res://.godot/imported/camouflage.png-6e61435e7c65e2b7eb4a44c4830ec2d3.ctex"]
 
 [params]
 
