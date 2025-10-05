@@ -1,9 +1,12 @@
-extends "highlightable_icon.gd"
+extends Control
+
+@export var id: int
 
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
 @onready var highlightable_icon: Control = %highlightable_icon
 
 func _ready():
+	highlightable_icon.id = id
 	connect("visibility_changed", update_ui)
 	update_ui()
 	
@@ -12,8 +15,14 @@ func _ready():
 		#animation_player.play("equip")
 
 func update_ui():
-	var key = GlobalKeySelector.keys.get(id)
+	var key = GlobalKeySelector.keys.get(highlightable_icon.id)
 	if (key._unlocked):
 		highlightable_icon.label.text = key._key_action_button + " |" + key._power._name + "|"
 	else:
 		highlightable_icon.label.text = "|X|"
+
+func highlight():
+	highlightable_icon.highlight()
+
+func unhighlight():
+	highlightable_icon.unhighlight()
