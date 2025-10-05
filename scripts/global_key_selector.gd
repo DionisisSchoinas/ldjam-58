@@ -1,5 +1,12 @@
 extends Node
 
+enum KEY {
+	D_RIGHT_KEY_INDEX = 0,
+	D_LEFT_KEY_INDEX = 1,
+	BUTTON_1_KEY_INDEX = 2,
+	BUTTON_2_KEY_INDEX = 3
+}
+
 class Power:
 	var _id : int
 	var _name : String
@@ -19,6 +26,9 @@ class PowerKey:
 		_key_action_button = key_action_button
 		_unlocked = unlocked
 		_power = power
+		
+	func has_power() -> bool:
+		return _power != null
 
 var powers: Array[Power] = [
 	Power.new(0),
@@ -31,8 +41,8 @@ var powers: Array[Power] = [
 ]
 
 var keys: Array[PowerKey] = [
-	PowerKey.new(0, ">", true, powers.get(0)),
-	PowerKey.new(1, "<", true, powers.get(6)),
-	PowerKey.new(2, "z", false, powers.get(6)),
-	PowerKey.new(3, "x", false, powers.get(6))
+	PowerKey.new(KEY.D_RIGHT_KEY_INDEX, ">", true, powers.get(0)),
+	PowerKey.new(KEY.D_LEFT_KEY_INDEX, "<", false, powers.get(6)),
+	PowerKey.new(KEY.BUTTON_1_KEY_INDEX, "z", false, powers.get(6)),
+	PowerKey.new(KEY.BUTTON_2_KEY_INDEX, "x", false, powers.get(6))
 ]

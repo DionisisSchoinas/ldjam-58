@@ -30,7 +30,7 @@ func select_key(index: int):
 
 func highlight_first():
 	if (visible):
-		select_key(0)
+		select_key(GlobalKeySelector.KEY.D_RIGHT_KEY_INDEX)
 
 func hightlight_next():
 	select_key(selected_key+1)
