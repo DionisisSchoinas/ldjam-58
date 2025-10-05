@@ -1,11 +1,8 @@
-extends TextureRect
+extends Control
 
-@export var text = "btn"
+@export var id : int
 
 @onready var label: Label = %Label
-
-func _ready():
-	label.text = text
 
 func highlight():
 	modulate = Color.AQUA
