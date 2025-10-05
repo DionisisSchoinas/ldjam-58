@@ -135,5 +135,6 @@ libraries = {
 }
 
 [node name="highlightable_icon" parent="." instance=ExtResource("2_1vfmd")]
+unique_name_in_owner = true
 layout_mode = 2
 texture = ExtResource("1_nripl")

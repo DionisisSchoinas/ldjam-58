@@ -38,12 +38,15 @@ layout_mode = 2
 
 [node name="power2" parent="powerMarginContainer/powerContainer" instance=ExtResource("1_7i0yb")]
 layout_mode = 2
+id = 1
 
 [node name="power3" parent="powerMarginContainer/powerContainer" instance=ExtResource("1_7i0yb")]
 layout_mode = 2
+id = 2
 
 [node name="power4" parent="powerMarginContainer/powerContainer" instance=ExtResource("1_7i0yb")]
 layout_mode = 2
+id = 3
 
 [node name="settingsMenuMarginContainer" type="MarginContainer" parent="."]
 unique_name_in_owner = true
@@ -79,12 +82,15 @@ layout_mode = 2
 
 [node name="power2" parent="settingsMenuMarginContainer/HBoxContainer/keyContainer" instance=ExtResource("4_1cu4j")]
 layout_mode = 2
+id = 1
 
 [node name="power3" parent="settingsMenuMarginContainer/HBoxContainer/keyContainer" instance=ExtResource("4_1cu4j")]
 layout_mode = 2
+id = 2
 
 [node name="power4" parent="settingsMenuMarginContainer/HBoxContainer/keyContainer" instance=ExtResource("4_1cu4j")]
 layout_mode = 2
+id = 3
 
 [node name="powerContainer" type="VBoxContainer" parent="settingsMenuMarginContainer/HBoxContainer"]
 unique_name_in_owner = true
@@ -101,9 +107,11 @@ layout_mode = 2
 
 [node name="power2" parent="settingsMenuMarginContainer/HBoxContainer/powerContainer/HBoxContainer" instance=ExtResource("4_s78s3")]
 layout_mode = 2
+id = 1
 
 [node name="power3" parent="settingsMenuMarginContainer/HBoxContainer/powerContainer/HBoxContainer" instance=ExtResource("4_s78s3")]
 layout_mode = 2
+id = 2
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="settingsMenuMarginContainer/HBoxContainer/powerContainer"]
 layout_mode = 2
@@ -111,12 +119,15 @@ size_flags_vertical = 3
 
 [node name="power4" parent="settingsMenuMarginContainer/HBoxContainer/powerContainer/HBoxContainer2" instance=ExtResource("4_s78s3")]
 layout_mode = 2
+id = 3
 
 [node name="power5" parent="settingsMenuMarginContainer/HBoxContainer/powerContainer/HBoxContainer2" instance=ExtResource("4_s78s3")]
 layout_mode = 2
+id = 4
 
 [node name="power6" parent="settingsMenuMarginContainer/HBoxContainer/powerContainer/HBoxContainer2" instance=ExtResource("4_s78s3")]
 layout_mode = 2
+id = 5
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="settingsMenuMarginContainer/HBoxContainer/powerContainer"]
 layout_mode = 2
@@ -124,3 +135,4 @@ size_flags_vertical = 3
 
 [node name="power7" parent="settingsMenuMarginContainer/HBoxContainer/powerContainer/HBoxContainer3" instance=ExtResource("4_s78s3")]
 layout_mode = 2
+id = 6

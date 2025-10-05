@@ -1,9 +1,6 @@
-extends MarginContainer
+extends "highlightable_icon.gd"
 
-@onready var highlightable_icon: TextureRect = %highlightable_icon
+@onready var highlightable_icon: Control = %highlightable_icon
 
-func highlight():
-	highlightable_icon.highlight()
-
-func unhighlight():
-	highlightable_icon.unhighlight()
+func _ready():
+	highlightable_icon.label.text = GlobalKeySelector.powers.get(id)._name
