@@ -32,7 +32,41 @@ func _process(delta):
 func _physics_process(delta):
 	move(delta)
 	move_and_slide()
+
+func _input(event: InputEvent):
+	if event.is_action_pressed("d_right"):
+		handle_powerkey(GlobalKeySelector.KEY.D_RIGHT_KEY_INDEX)
+	elif event.is_action_pressed("d_left"):
+		handle_powerkey(GlobalKeySelector.KEY.D_LEFT_KEY_INDEX)
+	elif event.is_action_pressed("button_1"):
+		handle_powerkey(GlobalKeySelector.KEY.BUTTON_1_KEY_INDEX)
+	elif event.is_action_pressed("button_2"):
+		handle_powerkey(GlobalKeySelector.KEY.BUTTON_2_KEY_INDEX)
+
+func handle_powerkey(index: int):
+	var key = GlobalKeySelector.keys.get(index)
+	if not key.has_power():
+		pass
+	print(key._power._name)
+
+func move_right(delta):
+	pass
+
+func move_left(delta):
+	pass
 	
+func jump():
+	pass
+
+func tailwhip():
+	pass
+
+func tongue():
+	pass
+
+func camouflage():
+	pass
+
 func move(delta):
 	var dir_x := Input.get_axis("d_left", "d_right")
 	var dir_y := Input.get_axis("d_up", "d_down")

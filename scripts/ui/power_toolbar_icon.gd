@@ -7,9 +7,9 @@ func _ready():
 	connect("visibility_changed", update_ui)
 	update_ui()
 	
-func _process(_delta):
-	if Input.is_action_just_pressed("button_1"):
-		animation_player.play("equip")
+#func _process(_delta):
+	#if Input.is_action_just_pressed("button_1"):
+		#animation_player.play("equip")
 
 func update_ui():
 	var key = GlobalKeySelector.keys.get(id)
