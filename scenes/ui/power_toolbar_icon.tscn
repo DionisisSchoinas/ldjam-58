@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://ove2kbx55itx"]
+[gd_scene load_steps=8 format=3 uid="uid://ove2kbx55itx"]
 
 [ext_resource type="Script" uid="uid://dc2bjq2adirp2" path="res://scripts/ui/power_toolbar_icon.gd" id="1_0jx2j"]
-[ext_resource type="Texture2D" uid="uid://cfhokjqiqcrcn" path="res://assets/kenney_prototype_textures/green/texture_01.png" id="1_nripl"]
 [ext_resource type="PackedScene" uid="uid://7pnqip1tqsfr" path="res://scenes/ui/highlightable_icon.tscn" id="2_1vfmd"]
+[ext_resource type="Texture2D" uid="uid://drbo4ys7cp4cn" path="res://assets/icons/power_button_icons/empty_square.png" id="3_kggd2"]
+[ext_resource type="Texture2D" uid="uid://c2x8v1owjwvhy" path="res://assets/kenney_prototype_textures/red/texture_01.png" id="4_8ha8t"]
 
 [sub_resource type="Animation" id="Animation_ok1a4"]
 length = 0.001
@@ -121,20 +122,33 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 3
-theme_override_constants/margin_left = 5
-theme_override_constants/margin_top = 5
-theme_override_constants/margin_right = 5
-theme_override_constants/margin_bottom = 5
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
 script = ExtResource("1_0jx2j")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
-root_node = NodePath("../highlightable_icon")
+root_node = NodePath("../VBoxContainer/highlightable_icon")
 libraries = {
 &"": SubResource("AnimationLibrary_ig3jh")
 }
 
-[node name="highlightable_icon" parent="." instance=ExtResource("2_1vfmd")]
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="highlightable_icon" parent="VBoxContainer" instance=ExtResource("2_1vfmd")]
 unique_name_in_owner = true
 layout_mode = 2
-texture = ExtResource("1_nripl")
+size_flags_vertical = 3
+texture = ExtResource("3_kggd2")
+
+[node name="key_icon" type="TextureRect" parent="VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
+texture = ExtResource("4_8ha8t")
+expand_mode = 1
+stretch_mode = 5

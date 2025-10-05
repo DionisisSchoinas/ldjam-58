@@ -1,6 +1,4 @@
-extends Control
-
-@export var id : int
+extends TextureRect
 
 @onready var label: Label = %Label
 

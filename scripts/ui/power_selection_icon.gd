@@ -1,12 +1,14 @@
 extends Control
 
 @export var id: int
+@export var texture: Texture
 
-@onready var highlightable_icon: Control = %highlightable_icon
+@onready var highlightable_icon: TextureRect = %highlightable_icon
 
 func _ready():
-	highlightable_icon.id = id
-	highlightable_icon.label.text = GlobalKeySelector.powers.get(highlightable_icon.id)._name
+	if texture != null:
+		highlightable_icon.texture = texture
+	highlightable_icon.label.text = GlobalKeySelector.powers.get(id)._name
 
 func highlight():
 	highlightable_icon.highlight()

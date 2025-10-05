@@ -1,25 +1,14 @@
 extends Control
 
 @export var id: int
+@export var texture: Texture
 
 @onready var animation_player: AnimationPlayer = %AnimationPlayer
-@onready var highlightable_icon: Control = %highlightable_icon
+@onready var highlightable_icon: TextureRect = %highlightable_icon
+@onready var key_icon: TextureRect = %key_icon
 
-func _ready():
-	highlightable_icon.id = id
-	connect("visibility_changed", update_ui)
-	update_ui()
-	
-#func _process(_delta):
-	#if Input.is_action_just_pressed("button_1"):
-		#animation_player.play("equip")
-
-func update_ui():
-	var key = GlobalKeySelector.keys.get(highlightable_icon.id)
-	if (key._unlocked):
-		highlightable_icon.label.text = key._key_action_button + " |" + key._power._name + "|"
-	else:
-		highlightable_icon.label.text = "|X|"
+func _ready() -> void:
+	key_icon.texture = texture
 
 func highlight():
 	highlightable_icon.highlight()
