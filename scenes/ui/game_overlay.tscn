@@ -1,0 +1,126 @@
+[gd_scene load_steps=9 format=3 uid="uid://dv34dgh7go3f8"]
+
+[ext_resource type="PackedScene" uid="uid://ove2kbx55itx" path="res://scenes/ui/power_toolbar_icon.tscn" id="1_7i0yb"]
+[ext_resource type="Script" uid="uid://dpnxs6b1mutcw" path="res://scripts/ui/hud.gd" id="1_ok1a4"]
+[ext_resource type="Texture2D" uid="uid://dissivn3oe4dx" path="res://assets/kenney_prototype_textures/orange/texture_01.png" id="3_4cufx"]
+[ext_resource type="Script" uid="uid://c7qxvun6hgdqs" path="res://scripts/ui/settings_menu.gd" id="3_w56ii"]
+[ext_resource type="PackedScene" uid="uid://biduepikn3db6" path="res://scenes/ui/key_selection_icon.tscn" id="4_1cu4j"]
+[ext_resource type="PackedScene" uid="uid://gfmm3ctb28ti" path="res://scenes/ui/power_selection_icon.tscn" id="4_s78s3"]
+[ext_resource type="Script" uid="uid://buoatx8ogkq0t" path="res://scripts/ui/key_container.gd" id="5_e2it2"]
+[ext_resource type="Script" uid="uid://ug0hynrv6sn5" path="res://scripts/ui/power_container.gd" id="7_e2it2"]
+
+[node name="HUD" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ok1a4")
+
+[node name="powerMarginContainer" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.75
+anchor_right = 0.75
+anchor_bottom = 0.95
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="powerContainer" type="HBoxContainer" parent="powerMarginContainer"]
+layout_mode = 2
+
+[node name="power1" parent="powerMarginContainer/powerContainer" instance=ExtResource("1_7i0yb")]
+layout_mode = 2
+
+[node name="power2" parent="powerMarginContainer/powerContainer" instance=ExtResource("1_7i0yb")]
+layout_mode = 2
+
+[node name="power3" parent="powerMarginContainer/powerContainer" instance=ExtResource("1_7i0yb")]
+layout_mode = 2
+
+[node name="power4" parent="powerMarginContainer/powerContainer" instance=ExtResource("1_7i0yb")]
+layout_mode = 2
+
+[node name="settingsMenuMarginContainer" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+process_mode = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_w56ii")
+
+[node name="TextureRect" type="TextureRect" parent="settingsMenuMarginContainer"]
+modulate = Color(1, 1, 1, 0.3137255)
+layout_mode = 2
+texture = ExtResource("3_4cufx")
+expand_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="settingsMenuMarginContainer"]
+layout_mode = 2
+
+[node name="keyContainer" type="VBoxContainer" parent="settingsMenuMarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.45
+script = ExtResource("5_e2it2")
+
+[node name="power1" parent="settingsMenuMarginContainer/HBoxContainer/keyContainer" instance=ExtResource("4_1cu4j")]
+layout_mode = 2
+
+[node name="power2" parent="settingsMenuMarginContainer/HBoxContainer/keyContainer" instance=ExtResource("4_1cu4j")]
+layout_mode = 2
+
+[node name="power3" parent="settingsMenuMarginContainer/HBoxContainer/keyContainer" instance=ExtResource("4_1cu4j")]
+layout_mode = 2
+
+[node name="power4" parent="settingsMenuMarginContainer/HBoxContainer/keyContainer" instance=ExtResource("4_1cu4j")]
+layout_mode = 2
+
+[node name="powerContainer" type="VBoxContainer" parent="settingsMenuMarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("7_e2it2")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="settingsMenuMarginContainer/HBoxContainer/powerContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="power1" parent="settingsMenuMarginContainer/HBoxContainer/powerContainer/HBoxContainer" instance=ExtResource("4_s78s3")]
+layout_mode = 2
+
+[node name="power2" parent="settingsMenuMarginContainer/HBoxContainer/powerContainer/HBoxContainer" instance=ExtResource("4_s78s3")]
+layout_mode = 2
+
+[node name="power3" parent="settingsMenuMarginContainer/HBoxContainer/powerContainer/HBoxContainer" instance=ExtResource("4_s78s3")]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="settingsMenuMarginContainer/HBoxContainer/powerContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="power4" parent="settingsMenuMarginContainer/HBoxContainer/powerContainer/HBoxContainer2" instance=ExtResource("4_s78s3")]
+layout_mode = 2
+
+[node name="power5" parent="settingsMenuMarginContainer/HBoxContainer/powerContainer/HBoxContainer2" instance=ExtResource("4_s78s3")]
+layout_mode = 2
+
+[node name="power6" parent="settingsMenuMarginContainer/HBoxContainer/powerContainer/HBoxContainer2" instance=ExtResource("4_s78s3")]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="settingsMenuMarginContainer/HBoxContainer/powerContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="power7" parent="settingsMenuMarginContainer/HBoxContainer/powerContainer/HBoxContainer3" instance=ExtResource("4_s78s3")]
+layout_mode = 2
