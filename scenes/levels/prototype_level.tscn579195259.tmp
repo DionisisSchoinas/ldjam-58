@@ -1,11 +1,10 @@
-[gd_scene load_steps=11 format=4 uid="uid://d1upg8c1flyf1"]
+[gd_scene load_steps=10 format=4 uid="uid://d1upg8c1flyf1"]
 
 [ext_resource type="Script" uid="uid://nov170mkieef" path="res://scripts/levels/level_logic.gd" id="1_6lfjr"]
 [ext_resource type="Script" uid="uid://45g0vd44gdly" path="res://scripts/basic_camera.gd" id="1_htrvu"]
 [ext_resource type="Texture2D" uid="uid://bd87osyhf2hnj" path="res://assets/kenney_prototype_textures/dark/texture_01.png" id="2_6lfjr"]
 [ext_resource type="Script" uid="uid://rq7qh2cm7r1v" path="res://scripts/levels/map.gd" id="3_i5e4g"]
 [ext_resource type="PackedScene" uid="uid://cphg78tqpqcha" path="res://scenes/player.tscn" id="3_qd0o6"]
-[ext_resource type="PackedScene" uid="uid://dv34dgh7go3f8" path="res://scenes/ui/game_overlay.tscn" id="6_7kxsd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ibfnv"]
 texture = ExtResource("2_6lfjr")
@@ -52,11 +51,17 @@ limit_top = 1294
 limit_right = 2518
 limit_bottom = 2652
 script = ExtResource("1_htrvu")
+follow_player = null
 
 [node name="CharacterBody2D" parent="Map" instance=ExtResource("3_qd0o6")]
 position = Vector2(2150, 2287)
-SPEED = 600
-friction_air = 5000
+SPEED = null
+JUMP_VELOCITY = null
+CHAIN_JUMP_VELOCITY = null
+gravity_terminal_velocity = null
+friction_floor = null
+friction_air = null
+gravity_muliplier = null
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Map"]
 position = Vector2(2662, 1267)
@@ -77,7 +82,3 @@ script = ExtResource("1_6lfjr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/level 2"]
 position = Vector2(4068, 2048)
 shape = SubResource("RectangleShape2D_nbgd6")
-
-[node name="Game Overlay" type="CanvasLayer" parent="."]
-
-[node name="Game Overlay" parent="Game Overlay" instance=ExtResource("6_7kxsd")]

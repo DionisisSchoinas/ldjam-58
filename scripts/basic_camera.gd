@@ -5,7 +5,7 @@ var player:Player
 
 func _ready():
 	var players = get_tree().get_nodes_in_group("Player")
-	_set_camera_limits_from_bounds()
+	#_set_camera_limits_from_bounds()
 	if players.size() > 0:
 		player = players[0]
 	else:
@@ -20,13 +20,13 @@ func _set_camera_limits_from_bounds():
 	var shape = get_parent().current_level.get_node("CollisionShape2D").shape
 	if shape is RectangleShape2D:
 		var rect_size = shape.extents * 2
-		var rect_pos = get_parent().current_level.global_position - shape.extents
+		var top_left_anchor =get_parent().current_level.get_node("CollisionShape2D").global_position - shape.extents
+		print(get_parent().current_level.position)
+		limit_left   = int(top_left_anchor.x)
+		limit_top    = int(top_left_anchor.y)
+		limit_right  = int(top_left_anchor.x + rect_size.x)
+		limit_bottom = int(top_left_anchor.y + rect_size.y)
 
-		limit_left   = int(rect_pos.x - 150)
-		limit_top    = int(rect_pos.y - 500)
-		limit_right  = int(rect_pos.x + rect_size.x - 150)
-		limit_bottom = int(rect_pos.y + rect_size.y - 300)
-	
 func _process(_delta):
-	_set_camera_limits_from_bounds()
+	#_set_camera_limits_from_bounds()
 	position = player.global_position
