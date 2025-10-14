@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2a3k1keyqp6w"
-path="res://.godot/imported/torso@4x.png-da88e5e1b50b17862f191e72fd434a5a.ctex"
+uid="uid://x11bk5prol5j"
+path="res://.godot/imported/torsoback.png-9c444aeff9e4021ca0b4b3bae6dded76.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/chameleon/torso@4x.png"
-dest_files=["res://.godot/imported/torso@4x.png-da88e5e1b50b17862f191e72fd434a5a.ctex"]
+source_file="res://assets/chameleon/torsoback.png"
+dest_files=["res://.godot/imported/torsoback.png-9c444aeff9e4021ca0b4b3bae6dded76.ctex"]
 
 [params]
 
